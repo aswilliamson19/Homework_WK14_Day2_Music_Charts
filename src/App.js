@@ -1,10 +1,12 @@
-import React from 'react';
-import './App.css';
+import React, {Component} from 'react';
+import MusicContainer from './containers/MusicContainer';
 
-function App() {
-  return (
-
-  );
+class App extends Component {
+  render() {
+    return (
+      <MusicContainer/>
+    );
+  }
 }
 
 export default App;
