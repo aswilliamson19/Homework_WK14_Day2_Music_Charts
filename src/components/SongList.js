@@ -17,11 +17,11 @@ class SongList extends Component {
     }
 
     render() {
-        // const options = this.props.songs.map((song, index) => {
-        //     return (
-        //         <option key={index} value={index}>{song.title}</option>
-        //     )
-        // })
+        const options = this.props.songs.map((song, index) => {
+            return (
+                <option key={index} value={index}>{song.title.label}</option>
+            )
+        })
         return (
             <div>
                 <label>Choose a song: </label>
@@ -29,8 +29,8 @@ class SongList extends Component {
                     id='song-selector' 
                     onChange={this.handleChange}
                     value={this.state.selectedIndex}>
-                        <option disabled value={-1}>Which song?...</option>
-                    {/* {options} */}
+                <option disabled value={-1}>Which song?...</option>
+                {options}
                 </select>
             </div>
         )
